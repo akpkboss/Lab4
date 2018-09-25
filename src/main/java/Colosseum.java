@@ -77,17 +77,20 @@ public class Colosseum {
         System.out.println("Please enter a name.");
         tempPokemon.name = myScan.nextLine();
         //attack level
+        System.out.println("Please enter an attack level.");
         tempPokemon.attackLevel = myScan.nextInt();
         //defense level
+        System.out.println("Please enter a defense level.");
         tempPokemon.defenseLevel = myScan.nextInt();
         //ask for hit points
         System.out.println("PLease enter the number of hit points the pokemon has");
         tempPokemon.hitPoints = myScan.nextInt();
+        myScan.nextLine();
         if (tempPokemon.hitPoints > MAX_HIT_POINTS) {
-            return tempPokemon;
-        } else {
             System.out.println("Your pokemon is wimpy...");
             tempPokemon.hitPoints = 1;
+            return tempPokemon;
+        } else {
             return tempPokemon;
         }
     }
